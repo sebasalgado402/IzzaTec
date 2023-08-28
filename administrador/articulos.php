@@ -185,7 +185,6 @@
         <tr>
 
           <th class="text-center align-middle" scope="col-1">Foto</th>
-          <th class="text-center align-middle" scope="col-1">Id_Art</th>
           <th class="text-center align-middle" scope="col-1">Cod</th>
           <th class="text-center align-middle" scope="col-1">Nombre</th>
           <th class="text-center align-middle" scope="col-1">Precio</th>
@@ -196,7 +195,6 @@
 
           <th class="text-center align-middle" scope="col-1">Categoría</th>
           <th class="text-center align-middle" scope="col-1">Observacion</th>
-          <th class="text-center align-middle" scope="col-1">Materiales</th>
           <th class="text-center align-middle" scope="col-1">Notas</th>
           <th class="text-center align-middle" scope="col-1">Acciónes</th>
 

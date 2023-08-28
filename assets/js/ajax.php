@@ -44,7 +44,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'modificarArticulo') {
   if (!empty($modificarArticulo)) {
 
     include('./../js/bd.php');
-    $consulta = "SELECT * FROM `articulos` WHERE art_id = " . $modificarArticulo . "";
+    $consulta = "SELECT * FROM `articulos` WHERE art_id = " . $modificarArticulo . " AND articulos.art_eliminado <> 'S'";
 
     $datos = mysqli_query($conexion, $consulta);
 
@@ -58,10 +58,8 @@ if (isset($_POST['action']) && $_POST['action'] == 'modificarArticulo') {
       $art_precio = $fila['art_precio'];
       $art_stock = $fila['art_stock'];
       $art_costo = $fila['art_costo'];
-      $art_vendible = $fila['art_vendible'];
       $art_deshabilitado = $fila['art_deshabilitado'];
       $art_categoria = $fila['art_categoria'];
-      $art_materiales = $fila['art_materiales'];
       $art_notas = $fila['art_notas'];
 
       $articulo->art_nom = $art_nom;
@@ -69,10 +67,8 @@ if (isset($_POST['action']) && $_POST['action'] == 'modificarArticulo') {
       $articulo->art_precio = $art_precio;
       $articulo->art_stock = $art_stock;
       $articulo->art_costo = $art_costo;
-      $articulo->art_vendible = $art_vendible;
       $articulo->art_deshabilitado = $art_deshabilitado;
       $articulo->art_categoria = $art_categoria;
-      $articulo->art_materiales = $art_materiales;
       $articulo->art_notas = $art_notas;
     }
 
@@ -98,8 +94,8 @@ if (isset($_POST['action']) && $_POST['action'] == 'modalModificar_Articulo') {
   if (!empty($modificarArticulo)) {
     include('./../js/bd.php');
 
-    $consulta = "UPDATE `articulos` SET `art_nom`='" . $modificarArticulo[2] . "',`art_desc`='" . $modificarArticulo[6] . "',`art_precio`='" . $modificarArticulo[3] . "',`art_stock`='" . $modificarArticulo[4] . "',`art_costo`='" . $modificarArticulo[5] . "',`art_vendible`='',`art_deshabilitado`='" . $modificarArticulo[9] . "',`art_categoria`='" . $modificarArticulo[1] . "',`art_materiales`='" . $modificarArticulo[7] . "' , `art_notas`='" . $modificarArticulo[8] . "' where `art_id` = '" . $modificarArticulo[0] . "' ";
-    //$db = mysqli_select_db( $conexion, $nombreBD ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+    $consulta = "UPDATE `articulos` SET `art_nom`='" . $modificarArticulo[2] . "',`art_desc`='" . $modificarArticulo[6] . "',`art_precio`='" . $modificarArticulo[3] . "',`art_stock`='" . $modificarArticulo[4] . "',`art_costo`='" . $modificarArticulo[5] . "',`art_deshabilitado`='" . $modificarArticulo[9] . "',`art_categoria`='" . $modificarArticulo[1] . "', `art_notas`='" . $modificarArticulo[8] . "' where `art_id` = '" . $modificarArticulo[0] . "' ";
+   
     $datos = mysqli_query($conexion, $consulta);
 
     mysqli_close($conexion);
@@ -147,7 +143,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'nuevoArticulo') {
     } else {
 
       include('./../js/bd.php');
-      $consulta__siExiste = "SELECT * FROM articulos WHERE art_cod = '$articulo->codigo'";
+      $consulta__siExiste = "SELECT * FROM articulos WHERE art_cod = '$articulo->codigo' AND articulos.art_eliminado <> 'S'";
       $datos = mysqli_query($conexion, $consulta__siExiste);
       $siExiste = mysqli_affected_rows($conexion);
       mysqli_close($conexion);
@@ -183,7 +179,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'eliminarArticulo') {
   if (!empty($eliminarArticulo)) {
 
     include('./../js/bd.php');
-    $consulta = "SELECT * FROM `articulos` WHERE art_id = " . $eliminarArticulo . "";
+    $consulta = "SELECT * FROM `articulos` WHERE art_id = " . $eliminarArticulo . " AND articulos.art_eliminado <> 'S'";
 
     $datos = mysqli_query($conexion, $consulta);
 
@@ -220,8 +216,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'modalEliminar_Articulo') {
 
     $id = $eliminarArticulo;
 
-    $consulta = "DELETE FROM `articulos` WHERE `articulos`.`art_id` = $id";
-    //$db = mysqli_select_db( $conexion, $nombreBD ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+    $consulta = "UPDATE articulos set art_eliminado = 'S' WHERE art_id = $id";
     $datos = mysqli_query($conexion, $consulta) or die($mysqli->error);
 
     mysqli_close($conexion);
@@ -251,7 +246,6 @@ if (isset($_POST['action']) && $_POST['action'] == 'modalnueva_Categoria') {
 
 
     $consulta = "INSERT INTO `categorias`( `cat_nom`, `cat_obs`) VALUES ('$categoria->nombre','$categoria->observacion')";
-    //$db = mysqli_select_db( $conexion, $nombreBD ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
 
     if (mysqli_query($conexion, $consulta)) {
       $data = 'exito';
@@ -358,7 +352,7 @@ if (isset($_FILES['images']) && isset($_POST['idArt_imagen'])) {
 if (isset($_POST['action']) && $_POST['action'] == 'searchArticulo') {
   if (!empty($_POST['articulo'])) {
     include('./../js/bd.php');
-    $consulta = "SELECT * FROM `articulos` WHERE art_nom LIKE '%" . $_POST['articulo'] . "%' and art_deshabilitado <> 'N';";
+    $consulta = "SELECT * FROM `articulos` WHERE art_nom LIKE '%" . $_POST['articulo'] . "%' and art_deshabilitado <> 'N' AND articulos.art_eliminado <> 'S' ;";
     $db = mysqli_select_db($conexion, $nombreBD) or die("Upps! Pues va a ser que no se ha podido conectar a la base de datos");
 
     $datos = mysqli_query($conexion, $consulta);
@@ -395,7 +389,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'searchArticulo') {
 if (isset($_POST['action']) && $_POST['action'] == 'searchArticuloChange') {
   if (!empty($_POST['articulo'])) {
     include('./../js/bd.php');
-    $consulta = "SELECT * FROM `articulos` WHERE art_nom LIKE '" . $_POST['articulo'] . "';";
+    $consulta = "SELECT * FROM `articulos` WHERE art_nom LIKE '" . $_POST['articulo'] . "' and art_deshabilitado <> 'N' AND articulos.art_eliminado <> 'S';";
     $db = mysqli_select_db($conexion, $nombreBD) or die("Upps! Pues va a ser que no se ha podido conectar a la base de datos");
 
     $datos = mysqli_query($conexion, $consulta);

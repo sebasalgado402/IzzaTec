@@ -55,7 +55,7 @@ function mostrarArticulos()
 {
   include('./../assets/js/bd.php');
   // 2) Preparar la orden SQL
-  $consulta = "SELECT * FROM articulos INNER JOIN categorias on articulos.art_categoria = categorias.cat_id ORDER BY art_id DESC ";
+  $consulta = "SELECT * FROM articulos INNER JOIN categorias on articulos.art_categoria = categorias.cat_id where articulos.art_eliminado <> 'S' ORDER BY art_id DESC ";
 
   // puedo seleccionar de DB
   $db = mysqli_select_db($conexion, $nombreBD) or die("Upps! Pues va a ser que no se ha podido conectar a la base de datos");
@@ -68,12 +68,13 @@ function mostrarArticulos()
   if ($fila = mysqli_num_rows($datos) > 0) {
     while ($fila = mysqli_fetch_array($datos)) {
       //<th scope="col-1">'.$i++.'</th>
+      //<th class="align-middle p-0 text-center">' . $fila["art_id"] . '</th>
       echo '
                 <tr>
                     <th class="align-middle text-center p-0" >
                       <a role="button" id="imgProducto" class="btn btn-primary" onclick="redireccionArticulo_Imagenes(' . $fila["art_id"] . ')"><i class="bi bi-images"></i></a>
                     </th>
-                    <th class="align-middle p-0 text-center">' . $fila["art_id"] . '</th>
+                    
                     <th class="align-middle p-0 text-center">' . $fila["art_cod"] . '</th>
                     <th class="align-middle p-0 text-center">' . $fila["art_nom"] . '</th>
                     <th class="align-middle p-0 text-center">$' . $fila["art_precio"] . '</th>
@@ -84,7 +85,6 @@ function mostrarArticulos()
                     
                     <th class="align-middle p-0 text-center">' . $fila["cat_nom"] . '</th>
                     <th class="align-middle p-0 text-center">' . $fila["art_desc"] . '</th>
-                    <th class="align-middle p-0 text-center">' . $fila["art_materiales"] . '</th>
                     <th class="align-middle p-0 text-center">' . $fila["art_notas"] . '</th>
                     <th class="align-middle text-center">
                     
