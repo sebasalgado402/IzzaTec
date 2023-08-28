@@ -384,7 +384,7 @@ function imprimir_factura(objet) { //funcion de redireccion de articulos
  
     let action = 'imprimirFactura';
     $.ajax({
-        url: './../maderastablas/impresiones/impresion-facturas.php',
+        url: './../administrador/impresiones/impresion-facturas.php',
         type: "POST",
         async: true,
         data: { action: action, imprimirFactura : objet },
@@ -416,7 +416,7 @@ $('#myBody').on('click', "[id^='imprimir_Factura']", function(e) {
 
 //Comienza --- Generar pdf Factura
 function redireccionPDF_factura(id) {
-    window.open('./../maderastablas/pdfnuevo/ver_factura.php?pdf_fact=' + id, '_blank');
+    window.open('./../administrador/pdfnuevo/ver_factura.php?pdf_fact=' + id, '_blank');
 }
 
 $('#myBody').on('click', "[id^='verPDF_Factura']", function(e) {
@@ -431,7 +431,7 @@ function imprimirArt_categoria(objet) { //funcion de redireccion de articulos
  
     let action = 'imprimirArticulos_categoria';
     $.ajax({
-        url: './../maderastablas/impresiones/impresion-categorias.php',
+        url: './../administrador/impresiones/impresion-categorias.php',
         type: "POST",
         async: true,
         data: { action: action, imprimirArticulos_categoria : objet },
@@ -465,7 +465,7 @@ function imprimirArt_seleccionado(objet) { //funcion de redireccion de articulos
  
     let action = 'imprimirArt_seleccionado';
     $.ajax({
-        url: './../maderastablas/impresiones/impresion-articulo.php',
+        url: './../administrador/impresiones/impresion-articulo.php',
         type: "POST",
         async: true,
         data: { action: action, imprimirArt_seleccionado : objet },
@@ -498,7 +498,7 @@ function redireccionArticulo(id) { //funcion de redireccion de articulos
     window.location.href = './../ecommerce/articulo.php?articleID=' + id;
 }
 function redireccionArticulo_Imagenes(id) { //funcion de redireccion de articulos
-    window.location.href = './../maderastablas/articulo_imagenes.php?img_articleID=' + id;
+    window.location.href = './../administrador/articulo_imagenes.php?img_articleID=' + id;
 }
 function vaciarCampos() {
     let vacio = '';

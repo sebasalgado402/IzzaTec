@@ -20,7 +20,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
             </div>
             <input type="search" name="txt_search" id="txt_search" class="Nav-InputSearch search_ecommerce" placeholder="Buscar: ">
         </div>
-        <a href="./../maderastablas/principal.php">
+        <a href="./../administrador/principal.php">
             <img src="./../assets/icons/admin.png" class="LoginButton__Icon" />
         </a>
     </nav>';
@@ -47,7 +47,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
             </div>
             <!--Login Button-->
         <div class="NavButtons_Container">
-            <a href="./../maderastablas/index.php" class="LoginButton">
+            <a href="./../administrador/index.php" class="LoginButton">
                 <img src="./../assets/icons/user.svg" class="LoginButton__IconS" loading="lazy">
             </a>
         </div>
@@ -74,7 +74,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
             </div>
             <!--Login Button-->
         <div class="NavButtons_Container">
-            <a href="./../maderastablas/index.php" class="LoginButton">
+            <a href="./../administrador/index.php" class="LoginButton">
                 <img src="./../assets/icons/user.svg" class="LoginButton__IconS" loading="lazy">
             </a>
         </div>

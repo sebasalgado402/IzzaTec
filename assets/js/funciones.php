@@ -7,11 +7,11 @@ $categoriasCargadas = new stdClass();
 function comprobarUsuario()
 {
   if (isset($_SESSION['usuarioActivo']) && $_SESSION['usu_rol'] == 1) {
-    // header('location: ./../maderastablas/principal.php');
+    // header('location: ./../administrador/principal.php');
   } elseif (isset($_SESSION['usuarioActivo']) && $_SESSION['usu_rol'] > 1) {
     header('location: ./../ecommerce/index.php');
   } else {
-    header('location: ./../maderastablas/index.php');
+    header('location: ./../administrador/index.php');
   }
 }
 

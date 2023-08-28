@@ -9,7 +9,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
         <div class="TitleContainer">
             <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/icon.png" class="Icon" loading="lazy"></a>
             </div>
-        <a href="./../maderastablas/principal.php">
+        <a href="./../administrador/principal.php">
             <img src="./../assets/icons/admin.png" class="LoginButton__Icon" />     
         </a>
     </nav>';
@@ -24,7 +24,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
             </div>
             <!--Login Button-->
             <div class="NavButtons_Container">
-                <a href="./../maderastablas/index.php"" class="LoginButton">
+                <a href="./../administrador/index.php"" class="LoginButton">
                     <img src="./../assets/icons/user.svg" class="LoginButton__Icon" loading="lazy">
                 </a>
             </div>
@@ -42,7 +42,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
             </div>
             <!--Login Button-->
             <div class="NavButtons_Container">
-                <a href="./../maderastablas/index.php" class="LoginButton">
+                <a href="./../administrador/index.php" class="LoginButton">
                     <img src="./../assets/icons/user.svg" class="LoginButton__Icon" loading="lazy">
                 </a>
             </div>

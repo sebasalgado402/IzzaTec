@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['usuarioActivo']) && strlen($_SESSION['usuarioActivo']) > 0 && $_SESSION['usu_rol'] == 1) {
-    header('location: ./../../maderastablas/principal.php');
+    header('location: ./../../administrador/principal.php');
 } else {
     header('location: ./../../ecommerce/index.php');
 }
@@ -23,9 +23,9 @@ if (isset($_POST['input__Usuario']) && isset($_POST['input__Password'])) {
             if ($arrayUser) {
                 $_SESSION['usuarioActivo'] = $arrayUser[0];
                 $_SESSION['usu_rol'] = $arrayUser[2];
-                header('location: ./../../maderastablas/principal.php');
+                header('location: ./../../administrador/principal.php');
             } else {
-                header('location: ./../../maderastablas/index.php');
+                header('location: ./../../administrador/index.php');
             }
         }
     }
