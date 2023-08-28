@@ -81,8 +81,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .Icon {
-    width: 60px;
-    height: 60px;
+    
+     height: 60px; 
 }
 
 .Nav_BackButton-Icon {
@@ -841,7 +841,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .FooterIcon {
-    width: 50px;
     height: 50px;
 }
 
@@ -944,7 +943,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .LoginContainer_Logo {
-    width: 150px;
+    
     height: 150px;
 }
 

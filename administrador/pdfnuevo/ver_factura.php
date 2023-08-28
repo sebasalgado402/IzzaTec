@@ -10,9 +10,9 @@ class MYPDF extends TCPDF {
         $this->SetAutoPageBreak(false, 0);
 
         // Obtener las dimensiones de la imagen
-        $img_file = dirname(__FILE__) . './../../assets/icons/logomt.jpg';
-        $imgWidth = 25; // Ancho deseado para la imagen
-        $imgHeight = 25; // Alto deseado para la imagen
+        $img_file = dirname(__FILE__) . './../../assets/icons/logopdf.jpg';
+        $imgWidth = 50; // Ancho deseado para la imagen
+        $imgHeight = 20; // Alto deseado para la imagen
 
         // Imprimir la imagen centrada en el encabezado
         $this->Image($img_file, ($this->getPageWidth() - $imgWidth) / 2, $this->getHeaderMargin(), $imgWidth, $imgHeight, '', '', '', false, 300, '', false, false, 0);
@@ -40,7 +40,7 @@ if (strlen($_GET['pdf_fact']) > 0 ) {
         $pdf->Cell(0, 6, DIRECCION, 0, 1, 'C');
 
         $pdf->SetFont('helvetica', 'B', 10);
-        $pdf->Cell(0, 6, 'Accesorios de madera para tu hogar', 0, 1, 'C');
+        $pdf->Cell(0, 6, '¡Todo lo que necesitas!', 0, 1, 'C');
 
         $pdf->Ln(1);
 

@@ -6,8 +6,8 @@
         <!--Nav-->
         <nav class="nav flex-nowrap">
             <div class="TitleContainer">
-                <img src="./../assets/icons/logomt.png" class="Icon" loading="lazy">
-                <p class="Title"><a class="navbar-brand" href="./../ecommerce/index.php">De Madera</a></p>
+                <img src="./../assets/icons/logoiz.png" class="Icon" loading="lazy">
+                <p class="Title"><a class="navbar-brand" href="./../ecommerce/index.php">Cerrajería Izaguirre</a></p>
             </div>
             <form class="ms-auto">
               <span class="text-dark" href="#">Bienvenido/a '.$_SESSION["usuarioActivo"].'</span>
@@ -23,8 +23,8 @@
     <!--Nav-->
     <nav class="nav flex-nowrap">
         <div class="TitleContainer">
-            <img src="./../assets/icons/logomt.png" class="Icon" loading="lazy">
-            <p class="Title"><a class="navbar-brand" href="./../ecommerce/index.php">De Maderas Tablas</a></p>
+            <img src="./../assets/icons/logoiz.png" class="Icon" loading="lazy">
+            <p class="Title"><a class="navbar-brand" href="./../ecommerce/index.php">Cerrajería Izaguirre</a></p>
         </div>
         <a href="https://wa.me/573001112233?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio" class="NavButton"
             target="_blank">
@@ -37,8 +37,8 @@
         <!--Nav-->
         <nav class="nav flex-nowrap">
             <div class="TitleContainer">
-                <img src="./../assets/icons/logomt.png" class="Icon" loading="lazy">
-                <p class="Title"><a class="navbar-brand" href="./../ecommerce/index.php">De Maderas Tablas</a></p>
+                <img src="./../assets/icons/logoiz.png" class="Icon" loading="lazy">
+                <p class="Title"><a class="navbar-brand" href="./../ecommerce/index.php">Cerrajería Izaguirre</a></p>
             </div>
             <form class="ms-auto">
               <a href="./../administrador/index.php" class="btn btn-outline-success m-1">Iniciar Sesion</a>

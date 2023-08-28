@@ -17,7 +17,7 @@
      <!-- Link a mis estilos -->
      <link rel="stylesheet" href="./../assets/css/style.css">
     <!--Icono en la pestaña -->
-    <link rel="shortcut icon" href="./../assets/icons/favicon.png">
+    <link rel="shortcut icon" href="./../assets/icons/favlogoiz.png">
     <!--Iconos de bootstrap  -->
     <link rel="stylesheet" href="./../bootstrapIcons/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->

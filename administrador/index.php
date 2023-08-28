@@ -19,7 +19,7 @@
       <!-- Link a mis estilos -->
       <link rel="stylesheet" href="./../assets/css/style.css">
     <!--Icono en la pestaña -->
-    <link rel="shortcut icon" href="./../assets/icons/favicon.png">
+    <link rel="shortcut icon" href="./../assets/icons/favlogoiz.png">
     <!--Iconos de bootstrap  -->
     <link rel="stylesheet" href="./../bootstrapIcons/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
@@ -38,7 +38,7 @@
 
     <div class="container">
         <form class="LoginContainer" action="./../assets/js/redirect.php" method="post">
-            <img src="./../assets/icons/icon.png" alt="Logo" class="LoginContainer_Logo">
+            <img src="./../assets/icons/logoiz.png" alt="Logo" class="LoginContainer_Logo">
             <!--Input Usuarios-->
             <div class="Login_InputContainer">
                 <label class="Login_InputContainer-Label" for="input__User">Usuario:</label>

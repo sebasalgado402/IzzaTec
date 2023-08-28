@@ -8,7 +8,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
             <img src="./../assets/icons/Menu.png" class="LoginButton__Icon" />
         </div>
         <div class="TitleContainer">
-            <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/icon.png" class="Icon" loading="lazy"></a>
+            <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/logoiz.png" class="Icon" loading="lazy"></a>
         </div>
         <div class="Nav-Content-Container">
             <!--Categories List-->
@@ -33,7 +33,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
                 <img src="./../assets/icons/Menu.png" class="LoginButton__Icon" />
             </div>
             <div class="TitleContainer">
-            <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/icon.png" class="Icon" loading="lazy"></a>
+            <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/logoiz.png" class="Icon" loading="lazy"></a>
             </div>
             <div class="Nav-Content-Container">
                 <!--Categories List-->
@@ -60,7 +60,7 @@ if (isset($_SESSION["usuarioActivo"]) && $_SESSION['usu_rol'] == 1) {
                 <img src="./../assets/icons/Menu.png" class="LoginButton__Icon" />
             </div>
             <div class="TitleContainer">
-            <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/icon.png" class="Icon" loading="lazy"></a>
+            <a class="navbar-brand" href="./../ecommerce/index.php"><img src="./../assets/icons/logoiz.png" class="Icon" loading="lazy"></a>
             </div>
             <div class="Nav-Content-Container">
                 <!--Categories List-->

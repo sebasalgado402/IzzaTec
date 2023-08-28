@@ -11,7 +11,7 @@ class MYPDF extends TCPDF {
         $bMargin = $this->getBreakMargin();
         $auto_page_break = $this->AutoPageBreak;
         $this->SetAutoPageBreak(false, 0);
-        $img_file = dirname(__FILE__) .'./../assets/icons/logomt.jpg';
+        $img_file = dirname(__FILE__) .'./../assets/icons/logoiz.png';
         $this->Image($img_file, 10, 8, 25, 25, '', '', '', false, 300, '', false, false, 0);
         $this->SetAutoPageBreak($auto_page_break, $bMargin);
         $this->setPageMark();
